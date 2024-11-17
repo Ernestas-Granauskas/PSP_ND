@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Lobby</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="game-container">
+    <h1>Game Lobby</h1>
+
+    <!-- New section for starting a session -->
+    <div id="start-session">
+        <button onclick="startSession()">Start New Game Session</button>
+    </div>
+
+    <!-- Section to display the session code -->
+    <div id="session-code-container" style="display: none;">
+        <p>Session Code: <span id="session-code"></span></p>
+    </div>
+
+    <!-- Join game option -->
+    <div id="join-game">
+        <input type="text" id="code-input" maxlength="4" placeholder="Enter 4-digit code">
+        <button onclick="joinGame()">Join Game</button>
+    </div>
+
+    <!-- Embedded session code for testing (comment out for static use) -->
+    <script>
+        const sessionCode = /*[[${sessionCode}]]*/ '';
+        if (sessionCode) {
+            console.log(`Session Code: ${sessionCode}`);
+        }
+    </script>
+</div>
+
+<script src="/script.js"></script>
+</body>
+</html>

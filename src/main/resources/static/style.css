@@ -1,0 +1,80 @@
+/* Center the game container both horizontally and vertically */
+#game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/*!* Styling for the toggle button *!*/
+/*#toggle-button {*/
+/*    padding: 10px 20px;*/
+/*    font-size: 1.5em;*/
+/*    cursor: pointer;*/
+/*    border: none;*/
+/*    background-color: #4CAF50;*/
+/*    color: white;*/
+/*    border-radius: 5px;*/
+/*    transition: background-color 0.3s ease;*/
+/*}*/
+
+/*    #toggle-button:hover {*/
+/*        background-color: #45a049;*/
+/*    }*/
+
+/* Styling for the start session button */
+#start-session button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    #start-session button:hover {
+        background-color: #0056b3;
+    }
+
+/* Styling for the input field and join game button */
+#join-game input {
+    padding: 10px;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+}
+
+#join-game button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #f0ad4e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    #join-game button:hover {
+        background-color: #ec971f;
+    }
+
+/* Make the session code section and game controls more prominent */
+#session-code-container {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+#game-controls {
+    margin-top: 20px;
+    font-size: 2em;
+}

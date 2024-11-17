@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Session</title>
+    <link rel="stylesheet" href="/gameStyle.css">
+</head>
+<body>
+<div id="game-container">
+    <h1>Game Session</h1>
+    <h2 id="session-info">Loading session...</h2>
+
+    <!-- Game controls -->
+    <div id="game-controls">
+        <button id="toggle-button" onclick="toggleState()" style="font-size: 20px">😎</button>
+    </div>
+    <div id="game-controls">
+        <table id="button-grid">
+            <tr>
+                <td><button id="button-1-1" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-1-2" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-1-3" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-1-4" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-1-5" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-1-6" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-1-7" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-1-8" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-1-9" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-1-10" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-1-11" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-1-12" onclick="toggleState(3)"> </button></td>
+            </tr>
+            <tr>
+                <td><button id="button-2-1" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-2-2" onclick="toggleState(2)" style="background-color: #a8a8a8;"> </button></td>
+                <td><button id="button-2-3" onclick="toggleState(3)" style="background-color: #a8a8a8;">1</button></td>
+                <td><button id="button-2-4" onclick="toggleState(1)" style="background-color: #a8a8a8;">2</button></td>
+                <td><button id="button-2-5" onclick="toggleState(2)" style="background-color: #a8a8a8;">3</button></td>
+                <td><button id="button-2-6" onclick="toggleState(3)" style="background-color: #a8a8a8;">4</button></td>
+                <td><button id="button-2-7" onclick="toggleState(1)" style="background-color: #a8a8a8;">5</button></td>
+                <td><button id="button-2-8" onclick="toggleState(2)" style="background-color: #a8a8a8;">6</button></td>
+                <td><button id="button-2-9" onclick="toggleState(3)" style="background-color: #a8a8a8;">7</button></td>
+                <td><button id="button-2-10" onclick="toggleState(1)" style="background-color: #a8a8a8;">8</button></td>
+                <td><button id="button-2-11" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-2-12" onclick="toggleState(3)"> </button></td>
+            </tr>
+            <tr>
+                <td><button id="button-3-1" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-3-2" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-3-3" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-3-4" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-3-5" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-3-6" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-3-7" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-3-8" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-3-9" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-3-10" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-3-11" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-3-12" onclick="toggleState(3)"> </button></td>
+            </tr>
+            <tr>
+                <td><button id="button-4-1" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-4-2" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-4-3" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-4-4" onclick="toggleState(1)" style="background-color: #a8a8a8; font-size: 20px">💣</button></td>
+                <td><button id="button-4-5" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-4-6" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-4-7" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-4-8" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-4-9" onclick="toggleState(3)" style="background-color: #a8a8a8; font-size: 20px;">🚩</button></td>
+                <td><button id="button-4-10" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-4-11" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-4-12" onclick="toggleState(3)"> </button></td>
+            </tr>
+            <tr>
+                <td><button id="button-5-1" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-5-2" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-5-3" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-5-4" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-5-5" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-5-6" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-5-7" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-5-8" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-5-9" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-5-10" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-5-11" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-5-12" onclick="toggleState(3)"> </button></td>
+            </tr>
+            <tr>
+                <td><button id="button-6-1" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-6-2" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-6-3" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-6-4" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-6-5" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-6-6" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-6-7" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-6-8" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-6-9" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-6-10" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-6-11" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-6-12" onclick="toggleState(3)"> </button></td>
+            </tr>
+            <tr>
+                <td><button id="button-7-1" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-7-2" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-7-3" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-7-4" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-7-5" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-7-6" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-7-7" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-7-8" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-7-9" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-7-10" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-7-11" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-7-12" onclick="toggleState(3)"> </button></td>
+            </tr>
+            <tr>
+                <td><button id="button-8-1" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-8-2" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-8-3" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-8-4" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-8-5" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-8-6" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-8-7" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-8-8" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-8-9" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-8-10" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-8-11" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-8-12" onclick="toggleState(3)"> </button></td>
+            </tr>
+            <tr>
+                <td><button id="button-9-1" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-9-2" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-9-3" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-9-4" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-9-5" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-9-6" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-9-7" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-9-8" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-9-9" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-9-10" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-9-11" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-9-12" onclick="toggleState(3)"> </button></td>
+            </tr>
+            <tr>
+                <td><button id="button-10-1" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-10-2" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-10-3" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-10-4" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-10-5" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-10-6" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-10-7" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-10-8" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-10-9" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-10-10" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-10-11" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-10-12" onclick="toggleState(3)"> </button></td>
+            </tr>
+            <tr>
+                <td><button id="button-11-1" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-11-2" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-11-3" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-11-4" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-11-5" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-11-6" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-11-7" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-11-8" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-11-9" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-11-10" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-11-11" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-11-12" onclick="toggleState(3)"> </button></td>
+            </tr>
+            <tr>
+                <td><button id="button-12-1" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-12-2" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-12-3" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-12-4" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-12-5" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-12-6" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-12-7" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-12-8" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-12-9" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-12-10" onclick="toggleState(1)"> </button></td>
+                <td><button id="button-12-11" onclick="toggleState(2)"> </button></td>
+                <td><button id="button-12-12" onclick="toggleState(3)"> </button></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Link the external JavaScript file -->
+<script src="/game.js"></script>
+</body>
+</html>
