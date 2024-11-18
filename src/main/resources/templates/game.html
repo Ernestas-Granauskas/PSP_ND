@@ -13,177 +13,175 @@
 
     <!-- Game controls -->
     <div id="game-controls">
-        <button id="toggle-button" onclick="toggleState()" style="font-size: 20px">😎</button>
-    </div>
-    <div id="game-controls">
+        <button id="game-state" style="font-size: 20px">🙂</button>
         <table id="button-grid">
             <tr>
-                <td><button id="button-1-1" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-1-2" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-1-3" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-1-4" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-1-5" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-1-6" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-1-7" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-1-8" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-1-9" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-1-10" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-1-11" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-1-12" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-1-1" onclick="toggleState(1, 1)" oncontextmenu="flag(1, 1); event.preventDefault();"> </button></td>
+                <td><button id="button-1-2" onclick="toggleState(1, 2)" oncontextmenu="flag(1, 2); event.preventDefault();"> </button></td>
+                <td><button id="button-1-3" onclick="toggleState(1, 3)" oncontextmenu="flag(1, 3); event.preventDefault();"> </button></td>
+                <td><button id="button-1-4" onclick="toggleState(1, 4)" oncontextmenu="flag(1, 4); event.preventDefault();"> </button></td>
+                <td><button id="button-1-5" onclick="toggleState(1, 5)" oncontextmenu="flag(1, 5); event.preventDefault();"> </button></td>
+                <td><button id="button-1-6" onclick="toggleState(1, 6)" oncontextmenu="flag(1, 6); event.preventDefault();"> </button></td>
+                <td><button id="button-1-7" onclick="toggleState(1, 7)" oncontextmenu="flag(1, 7); event.preventDefault();"> </button></td>
+                <td><button id="button-1-8" onclick="toggleState(1, 8)" oncontextmenu="flag(1, 8); event.preventDefault();"> </button></td>
+                <td><button id="button-1-9" onclick="toggleState(1, 9)" oncontextmenu="flag(1, 9); event.preventDefault();"> </button></td>
+                <td><button id="button-1-10" onclick="toggleState(1, 10)" oncontextmenu="flag(1, 10); event.preventDefault();"> </button></td>
+                <td><button id="button-1-11" onclick="toggleState(1, 11)" oncontextmenu="flag(1, 11); event.preventDefault();"> </button></td>
+                <td><button id="button-1-12" onclick="toggleState(1, 12)" oncontextmenu="flag(1, 12); event.preventDefault();"> </button></td>
             </tr>
             <tr>
-                <td><button id="button-2-1" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-2-2" onclick="toggleState(2)" style="background-color: #a8a8a8;"> </button></td>
-                <td><button id="button-2-3" onclick="toggleState(3)" style="background-color: #a8a8a8;">1</button></td>
-                <td><button id="button-2-4" onclick="toggleState(1)" style="background-color: #a8a8a8;">2</button></td>
-                <td><button id="button-2-5" onclick="toggleState(2)" style="background-color: #a8a8a8;">3</button></td>
-                <td><button id="button-2-6" onclick="toggleState(3)" style="background-color: #a8a8a8;">4</button></td>
-                <td><button id="button-2-7" onclick="toggleState(1)" style="background-color: #a8a8a8;">5</button></td>
-                <td><button id="button-2-8" onclick="toggleState(2)" style="background-color: #a8a8a8;">6</button></td>
-                <td><button id="button-2-9" onclick="toggleState(3)" style="background-color: #a8a8a8;">7</button></td>
-                <td><button id="button-2-10" onclick="toggleState(1)" style="background-color: #a8a8a8;">8</button></td>
-                <td><button id="button-2-11" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-2-12" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-2-1" onclick="toggleState(2, 1)" oncontextmenu="flag(2, 1); event.preventDefault();"> </button></td>
+                <td><button id="button-2-2" onclick="toggleState(2, 2)" oncontextmenu="flag(2, 2); event.preventDefault();"> </button></td>
+                <td><button id="button-2-3" onclick="toggleState(2, 3)" oncontextmenu="flag(2, 3); event.preventDefault();"> </button></td>
+                <td><button id="button-2-4" onclick="toggleState(2, 4)" oncontextmenu="flag(2, 4); event.preventDefault();"> </button></td>
+                <td><button id="button-2-5" onclick="toggleState(2, 5)" oncontextmenu="flag(2, 5); event.preventDefault();"> </button></td>
+                <td><button id="button-2-6" onclick="toggleState(2, 6)" oncontextmenu="flag(2, 6); event.preventDefault();"> </button></td>
+                <td><button id="button-2-7" onclick="toggleState(2, 7)" oncontextmenu="flag(2, 7); event.preventDefault();"> </button></td>
+                <td><button id="button-2-8" onclick="toggleState(2, 8)" oncontextmenu="flag(2, 8); event.preventDefault();"> </button></td>
+                <td><button id="button-2-9" onclick="toggleState(2, 9)" oncontextmenu="flag(2, 9); event.preventDefault();"> </button></td>
+                <td><button id="button-2-10" onclick="toggleState(2, 10)" oncontextmenu="flag(2, 10); event.preventDefault();"> </button></td>
+                <td><button id="button-2-11" onclick="toggleState(2, 11)" oncontextmenu="flag(2, 11); event.preventDefault();"> </button></td>
+                <td><button id="button-2-12" onclick="toggleState(2, 12)" oncontextmenu="flag(2, 12); event.preventDefault();"> </button></td>
             </tr>
             <tr>
-                <td><button id="button-3-1" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-3-2" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-3-3" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-3-4" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-3-5" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-3-6" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-3-7" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-3-8" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-3-9" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-3-10" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-3-11" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-3-12" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-3-1" onclick="toggleState(3, 1)" oncontextmenu="flag(3, 1); event.preventDefault();"> </button></td>
+                <td><button id="button-3-2" onclick="toggleState(3, 2)" oncontextmenu="flag(3, 2); event.preventDefault();"> </button></td>
+                <td><button id="button-3-3" onclick="toggleState(3, 3)" oncontextmenu="flag(3, 3); event.preventDefault();"> </button></td>
+                <td><button id="button-3-4" onclick="toggleState(3, 4)" oncontextmenu="flag(3, 4); event.preventDefault();"> </button></td>
+                <td><button id="button-3-5" onclick="toggleState(3, 5)" oncontextmenu="flag(3, 5); event.preventDefault();"> </button></td>
+                <td><button id="button-3-6" onclick="toggleState(3, 6)" oncontextmenu="flag(3, 6); event.preventDefault();"> </button></td>
+                <td><button id="button-3-7" onclick="toggleState(3, 7)" oncontextmenu="flag(3, 7); event.preventDefault();"> </button></td>
+                <td><button id="button-3-8" onclick="toggleState(3, 8)" oncontextmenu="flag(3, 8); event.preventDefault();"> </button></td>
+                <td><button id="button-3-9" onclick="toggleState(3, 9)" oncontextmenu="flag(3, 9); event.preventDefault();"> </button></td>
+                <td><button id="button-3-10" onclick="toggleState(3, 10)" oncontextmenu="flag(3, 10); event.preventDefault();"> </button></td>
+                <td><button id="button-3-11" onclick="toggleState(3, 11)" oncontextmenu="flag(3, 11); event.preventDefault();"> </button></td>
+                <td><button id="button-3-12" onclick="toggleState(3, 12)" oncontextmenu="flag(3, 12); event.preventDefault();"> </button></td>
             </tr>
             <tr>
-                <td><button id="button-4-1" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-4-2" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-4-3" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-4-4" onclick="toggleState(1)" style="background-color: #a8a8a8; font-size: 20px">💣</button></td>
-                <td><button id="button-4-5" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-4-6" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-4-7" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-4-8" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-4-9" onclick="toggleState(3)" style="background-color: #a8a8a8; font-size: 20px;">🚩</button></td>
-                <td><button id="button-4-10" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-4-11" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-4-12" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-4-1" onclick="toggleState(4, 1)" oncontextmenu="flag(4, 1); event.preventDefault();"> </button></td>
+                <td><button id="button-4-2" onclick="toggleState(4, 2)" oncontextmenu="flag(4, 2); event.preventDefault();"> </button></td>
+                <td><button id="button-4-3" onclick="toggleState(4, 3)" oncontextmenu="flag(4, 3); event.preventDefault();"> </button></td>
+                <td><button id="button-4-4" onclick="toggleState(4, 4)" oncontextmenu="flag(4, 4); event.preventDefault();"> </button></td>
+                <td><button id="button-4-5" onclick="toggleState(4, 5)" oncontextmenu="flag(4, 5); event.preventDefault();"> </button></td>
+                <td><button id="button-4-6" onclick="toggleState(4, 6)" oncontextmenu="flag(4, 6); event.preventDefault();"> </button></td>
+                <td><button id="button-4-7" onclick="toggleState(4, 7)" oncontextmenu="flag(4, 7); event.preventDefault();"> </button></td>
+                <td><button id="button-4-8" onclick="toggleState(4, 8)" oncontextmenu="flag(4, 8); event.preventDefault();"> </button></td>
+                <td><button id="button-4-9" onclick="toggleState(4, 9)" oncontextmenu="flag(4, 9); event.preventDefault();"> </button></td>
+                <td><button id="button-4-10" onclick="toggleState(4, 10)" oncontextmenu="flag(4, 10); event.preventDefault();"> </button></td>
+                <td><button id="button-4-11" onclick="toggleState(4, 11)" oncontextmenu="flag(4, 11); event.preventDefault();"> </button></td>
+                <td><button id="button-4-12" onclick="toggleState(4, 12)" oncontextmenu="flag(4, 12); event.preventDefault();"> </button></td>
             </tr>
             <tr>
-                <td><button id="button-5-1" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-5-2" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-5-3" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-5-4" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-5-5" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-5-6" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-5-7" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-5-8" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-5-9" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-5-10" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-5-11" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-5-12" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-5-1" onclick="toggleState(5, 1)" oncontextmenu="flag(5, 1); event.preventDefault();"> </button></td>
+                <td><button id="button-5-2" onclick="toggleState(5, 2)" oncontextmenu="flag(5, 2); event.preventDefault();"> </button></td>
+                <td><button id="button-5-3" onclick="toggleState(5, 3)" oncontextmenu="flag(5, 3); event.preventDefault();"> </button></td>
+                <td><button id="button-5-4" onclick="toggleState(5, 4)" oncontextmenu="flag(5, 4); event.preventDefault();"> </button></td>
+                <td><button id="button-5-5" onclick="toggleState(5, 5)" oncontextmenu="flag(5, 5); event.preventDefault();"> </button></td>
+                <td><button id="button-5-6" onclick="toggleState(5, 6)" oncontextmenu="flag(5, 6); event.preventDefault();"> </button></td>
+                <td><button id="button-5-7" onclick="toggleState(5, 7)" oncontextmenu="flag(5, 7); event.preventDefault();"> </button></td>
+                <td><button id="button-5-8" onclick="toggleState(5, 8)" oncontextmenu="flag(5, 8); event.preventDefault();"> </button></td>
+                <td><button id="button-5-9" onclick="toggleState(5, 9)" oncontextmenu="flag(5, 9); event.preventDefault();"> </button></td>
+                <td><button id="button-5-10" onclick="toggleState(5, 10)" oncontextmenu="flag(5, 10); event.preventDefault();"> </button></td>
+                <td><button id="button-5-11" onclick="toggleState(5, 11)" oncontextmenu="flag(5, 11); event.preventDefault();"> </button></td>
+                <td><button id="button-5-12" onclick="toggleState(5, 12)" oncontextmenu="flag(5, 12); event.preventDefault();"> </button></td>
             </tr>
             <tr>
-                <td><button id="button-6-1" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-6-2" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-6-3" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-6-4" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-6-5" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-6-6" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-6-7" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-6-8" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-6-9" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-6-10" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-6-11" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-6-12" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-6-1" onclick="toggleState(6, 1)" oncontextmenu="flag(6, 1); event.preventDefault();"> </button></td>
+                <td><button id="button-6-2" onclick="toggleState(6, 2)" oncontextmenu="flag(6, 2); event.preventDefault();"> </button></td>
+                <td><button id="button-6-3" onclick="toggleState(6, 3)" oncontextmenu="flag(6, 3); event.preventDefault();"> </button></td>
+                <td><button id="button-6-4" onclick="toggleState(6, 4)" oncontextmenu="flag(6, 4); event.preventDefault();"> </button></td>
+                <td><button id="button-6-5" onclick="toggleState(6, 5)" oncontextmenu="flag(6, 5); event.preventDefault();"> </button></td>
+                <td><button id="button-6-6" onclick="toggleState(6, 6)" oncontextmenu="flag(6, 6); event.preventDefault();"> </button></td>
+                <td><button id="button-6-7" onclick="toggleState(6, 7)" oncontextmenu="flag(6, 7); event.preventDefault();"> </button></td>
+                <td><button id="button-6-8" onclick="toggleState(6, 8)" oncontextmenu="flag(6, 8); event.preventDefault();"> </button></td>
+                <td><button id="button-6-9" onclick="toggleState(6, 9)" oncontextmenu="flag(6, 9); event.preventDefault();"> </button></td>
+                <td><button id="button-6-10" onclick="toggleState(6, 10)" oncontextmenu="flag(6, 10); event.preventDefault();"> </button></td>
+                <td><button id="button-6-11" onclick="toggleState(6, 11)" oncontextmenu="flag(6, 11); event.preventDefault();"> </button></td>
+                <td><button id="button-6-12" onclick="toggleState(6, 12)" oncontextmenu="flag(6, 12); event.preventDefault();"> </button></td>
             </tr>
             <tr>
-                <td><button id="button-7-1" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-7-2" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-7-3" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-7-4" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-7-5" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-7-6" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-7-7" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-7-8" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-7-9" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-7-10" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-7-11" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-7-12" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-7-1" onclick="toggleState(7, 1)" oncontextmenu="flag(7, 1); event.preventDefault();"> </button></td>
+                <td><button id="button-7-2" onclick="toggleState(7, 2)" oncontextmenu="flag(7, 2); event.preventDefault();"> </button></td>
+                <td><button id="button-7-3" onclick="toggleState(7, 3)" oncontextmenu="flag(7, 3); event.preventDefault();"> </button></td>
+                <td><button id="button-7-4" onclick="toggleState(7, 4)" oncontextmenu="flag(7, 4); event.preventDefault();"> </button></td>
+                <td><button id="button-7-5" onclick="toggleState(7, 5)" oncontextmenu="flag(7, 5); event.preventDefault();"> </button></td>
+                <td><button id="button-7-6" onclick="toggleState(7, 6)" oncontextmenu="flag(7, 6); event.preventDefault();"> </button></td>
+                <td><button id="button-7-7" onclick="toggleState(7, 7)" oncontextmenu="flag(7, 7); event.preventDefault();"> </button></td>
+                <td><button id="button-7-8" onclick="toggleState(7, 8)" oncontextmenu="flag(7, 8); event.preventDefault();"> </button></td>
+                <td><button id="button-7-9" onclick="toggleState(7, 9)" oncontextmenu="flag(7, 9); event.preventDefault();"> </button></td>
+                <td><button id="button-7-10" onclick="toggleState(7, 10)" oncontextmenu="flag(7, 10); event.preventDefault();"> </button></td>
+                <td><button id="button-7-11" onclick="toggleState(7, 11)" oncontextmenu="flag(7, 11); event.preventDefault();"> </button></td>
+                <td><button id="button-7-12" onclick="toggleState(7, 12)" oncontextmenu="flag(7, 12); event.preventDefault();"> </button></td>
             </tr>
             <tr>
-                <td><button id="button-8-1" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-8-2" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-8-3" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-8-4" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-8-5" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-8-6" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-8-7" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-8-8" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-8-9" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-8-10" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-8-11" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-8-12" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-8-1" onclick="toggleState(8, 1)" oncontextmenu="flag(8, 1); event.preventDefault();"> </button></td>
+                <td><button id="button-8-2" onclick="toggleState(8, 2)" oncontextmenu="flag(8, 2); event.preventDefault();"> </button></td>
+                <td><button id="button-8-3" onclick="toggleState(8, 3)" oncontextmenu="flag(8, 3); event.preventDefault();"> </button></td>
+                <td><button id="button-8-4" onclick="toggleState(8, 4)" oncontextmenu="flag(8, 4); event.preventDefault();"> </button></td>
+                <td><button id="button-8-5" onclick="toggleState(8, 5)" oncontextmenu="flag(8, 5); event.preventDefault();"> </button></td>
+                <td><button id="button-8-6" onclick="toggleState(8, 6)" oncontextmenu="flag(8, 6); event.preventDefault();"> </button></td>
+                <td><button id="button-8-7" onclick="toggleState(8, 7)" oncontextmenu="flag(8, 7); event.preventDefault();"> </button></td>
+                <td><button id="button-8-8" onclick="toggleState(8, 8)" oncontextmenu="flag(8, 8); event.preventDefault();"> </button></td>
+                <td><button id="button-8-9" onclick="toggleState(8, 9)" oncontextmenu="flag(8, 9); event.preventDefault();"> </button></td>
+                <td><button id="button-8-10" onclick="toggleState(8, 10)" oncontextmenu="flag(8, 10); event.preventDefault();"> </button></td>
+                <td><button id="button-8-11" onclick="toggleState(8, 11)" oncontextmenu="flag(8, 11); event.preventDefault();"> </button></td>
+                <td><button id="button-8-12" onclick="toggleState(8, 12)" oncontextmenu="flag(8, 12); event.preventDefault();"> </button></td>
             </tr>
             <tr>
-                <td><button id="button-9-1" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-9-2" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-9-3" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-9-4" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-9-5" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-9-6" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-9-7" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-9-8" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-9-9" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-9-10" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-9-11" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-9-12" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-9-1" onclick="toggleState(9, 1)" oncontextmenu="flag(9, 1); event.preventDefault();"> </button></td>
+                <td><button id="button-9-2" onclick="toggleState(9, 2)" oncontextmenu="flag(9, 2); event.preventDefault();"> </button></td>
+                <td><button id="button-9-3" onclick="toggleState(9, 3)" oncontextmenu="flag(9, 3); event.preventDefault();"> </button></td>
+                <td><button id="button-9-4" onclick="toggleState(9, 4)" oncontextmenu="flag(9, 4); event.preventDefault();"> </button></td>
+                <td><button id="button-9-5" onclick="toggleState(9, 5)" oncontextmenu="flag(9, 5); event.preventDefault();"> </button></td>
+                <td><button id="button-9-6" onclick="toggleState(9, 6)" oncontextmenu="flag(9, 6); event.preventDefault();"> </button></td>
+                <td><button id="button-9-7" onclick="toggleState(9, 7)" oncontextmenu="flag(9, 7); event.preventDefault();"> </button></td>
+                <td><button id="button-9-8" onclick="toggleState(9, 8)" oncontextmenu="flag(9, 8); event.preventDefault();"> </button></td>
+                <td><button id="button-9-9" onclick="toggleState(9, 9)" oncontextmenu="flag(9, 9); event.preventDefault();"> </button></td>
+                <td><button id="button-9-10" onclick="toggleState(9, 10)" oncontextmenu="flag(9, 10); event.preventDefault();"> </button></td>
+                <td><button id="button-9-11" onclick="toggleState(9, 11)" oncontextmenu="flag(9, 11); event.preventDefault();"> </button></td>
+                <td><button id="button-9-12" onclick="toggleState(9, 12)" oncontextmenu="flag(9, 12); event.preventDefault();"> </button></td>
             </tr>
             <tr>
-                <td><button id="button-10-1" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-10-2" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-10-3" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-10-4" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-10-5" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-10-6" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-10-7" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-10-8" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-10-9" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-10-10" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-10-11" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-10-12" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-10-1" onclick="toggleState(10, 1)" oncontextmenu="flag(10, 1); event.preventDefault();"> </button></td>
+                <td><button id="button-10-2" onclick="toggleState(10, 2)" oncontextmenu="flag(10, 2); event.preventDefault();"> </button></td>
+                <td><button id="button-10-3" onclick="toggleState(10, 3)" oncontextmenu="flag(10, 3); event.preventDefault();"> </button></td>
+                <td><button id="button-10-4" onclick="toggleState(10, 4)" oncontextmenu="flag(10, 4); event.preventDefault();"> </button></td>
+                <td><button id="button-10-5" onclick="toggleState(10, 5)" oncontextmenu="flag(10, 5); event.preventDefault();"> </button></td>
+                <td><button id="button-10-6" onclick="toggleState(10, 6)" oncontextmenu="flag(10, 6); event.preventDefault();"> </button></td>
+                <td><button id="button-10-7" onclick="toggleState(10, 7)" oncontextmenu="flag(10, 7); event.preventDefault();"> </button></td>
+                <td><button id="button-10-8" onclick="toggleState(10, 8)" oncontextmenu="flag(10, 8); event.preventDefault();"> </button></td>
+                <td><button id="button-10-9" onclick="toggleState(10, 9)" oncontextmenu="flag(10, 9); event.preventDefault();"> </button></td>
+                <td><button id="button-10-10" onclick="toggleState(10, 10)" oncontextmenu="flag(10, 10); event.preventDefault();"> </button></td>
+                <td><button id="button-10-11" onclick="toggleState(10, 11)" oncontextmenu="flag(10, 11); event.preventDefault();"> </button></td>
+                <td><button id="button-10-12" onclick="toggleState(10, 12)" oncontextmenu="flag(10, 12); event.preventDefault();"> </button></td>
             </tr>
             <tr>
-                <td><button id="button-11-1" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-11-2" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-11-3" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-11-4" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-11-5" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-11-6" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-11-7" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-11-8" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-11-9" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-11-10" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-11-11" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-11-12" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-11-1" onclick="toggleState(11, 1)" oncontextmenu="flag(11, 1); event.preventDefault();"> </button></td>
+                <td><button id="button-11-2" onclick="toggleState(11, 2)" oncontextmenu="flag(11, 2); event.preventDefault();"> </button></td>
+                <td><button id="button-11-3" onclick="toggleState(11, 3)" oncontextmenu="flag(11, 3); event.preventDefault();"> </button></td>
+                <td><button id="button-11-4" onclick="toggleState(11, 4)" oncontextmenu="flag(11, 4); event.preventDefault();"> </button></td>
+                <td><button id="button-11-5" onclick="toggleState(11, 5)" oncontextmenu="flag(11, 5); event.preventDefault();"> </button></td>
+                <td><button id="button-11-6" onclick="toggleState(11, 6)" oncontextmenu="flag(11, 6); event.preventDefault();"> </button></td>
+                <td><button id="button-11-7" onclick="toggleState(11, 7)" oncontextmenu="flag(11, 7); event.preventDefault();"> </button></td>
+                <td><button id="button-11-8" onclick="toggleState(11, 8)" oncontextmenu="flag(11, 8); event.preventDefault();"> </button></td>
+                <td><button id="button-11-9" onclick="toggleState(11, 9)" oncontextmenu="flag(11, 9); event.preventDefault();"> </button></td>
+                <td><button id="button-11-10" onclick="toggleState(11, 10)" oncontextmenu="flag(11, 10); event.preventDefault();"> </button></td>
+                <td><button id="button-11-11" onclick="toggleState(11, 11)" oncontextmenu="flag(11, 11); event.preventDefault();"> </button></td>
+                <td><button id="button-11-12" onclick="toggleState(11, 12)" oncontextmenu="flag(11, 12); event.preventDefault();"> </button></td>
             </tr>
             <tr>
-                <td><button id="button-12-1" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-12-2" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-12-3" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-12-4" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-12-5" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-12-6" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-12-7" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-12-8" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-12-9" onclick="toggleState(3)"> </button></td>
-                <td><button id="button-12-10" onclick="toggleState(1)"> </button></td>
-                <td><button id="button-12-11" onclick="toggleState(2)"> </button></td>
-                <td><button id="button-12-12" onclick="toggleState(3)"> </button></td>
+                <td><button id="button-12-1" onclick="toggleState(12, 1)" oncontextmenu="flag(12, 1); event.preventDefault();"> </button></td>
+                <td><button id="button-12-2" onclick="toggleState(12, 2)" oncontextmenu="flag(12, 2); event.preventDefault();"> </button></td>
+                <td><button id="button-12-3" onclick="toggleState(12, 3)" oncontextmenu="flag(12, 3); event.preventDefault();"> </button></td>
+                <td><button id="button-12-4" onclick="toggleState(12, 4)" oncontextmenu="flag(12, 4); event.preventDefault();"> </button></td>
+                <td><button id="button-12-5" onclick="toggleState(12, 5)" oncontextmenu="flag(12, 5); event.preventDefault();"> </button></td>
+                <td><button id="button-12-6" onclick="toggleState(12, 6)" oncontextmenu="flag(12, 6); event.preventDefault();"> </button></td>
+                <td><button id="button-12-7" onclick="toggleState(12, 7)" oncontextmenu="flag(12, 7); event.preventDefault();"> </button></td>
+                <td><button id="button-12-8" onclick="toggleState(12, 8)" oncontextmenu="flag(12, 8); event.preventDefault();"> </button></td>
+                <td><button id="button-12-9" onclick="toggleState(12, 9)" oncontextmenu="flag(12, 9); event.preventDefault();"> </button></td>
+                <td><button id="button-12-10" onclick="toggleState(12, 10)" oncontextmenu="flag(12, 10); event.preventDefault();"> </button></td>
+                <td><button id="button-12-11" onclick="toggleState(12, 11)" oncontextmenu="flag(12, 11); event.preventDefault();"> </button></td>
+                <td><button id="button-12-12" onclick="toggleState(12, 12)" oncontextmenu="flag(12, 12); event.preventDefault();"> </button></td>
             </tr>
         </table>
     </div>
