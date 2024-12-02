@@ -10,4 +10,9 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 
+    //kodo svarumas
+    //geresnis objektinis
+    //mazesni controller
+    //json mapinimas i objektus
+
 }

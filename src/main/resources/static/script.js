@@ -3,6 +3,7 @@ function startSession() {
     fetch(`${window.location.origin}/api/startSession`)
         .then(response => response.json())
         .then(data => {
+            console.log('Response data:', data)
             const sessionCode = data.sessionCode;
             document.getElementById("session-code").textContent = sessionCode;
             document.getElementById("session-code-container").style.display = "block";
