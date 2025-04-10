@@ -92,6 +92,20 @@ public class GameController {
         }
     }
 
+    @PostMapping("/reset")
+    public ResponseEntity<String> reset(@RequestBody Map<String, String> body) {//ResetRequest request) {
+        //request.getRow();
+        String code = body.get("sessionCode");
+        GameBoard board = boards.get(code);
+        if(board != null) {
+            board.clearBoard();
+
+            return getResponseMessage(code, board);
+        } else {
+            return ResponseEntity.badRequest().body("Board not found.");
+        }
+    }
+
     private ResponseEntity<String> getResponseMessage(String code, GameBoard board) {
         try {
             // Retrieve the GameSession from the sessions map

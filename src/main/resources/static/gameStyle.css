@@ -1,6 +1,37 @@
-#game-controls {
-    text-align: center;
-    margin-top: 0px;
+/*#game-controls {*/
+/*    text-align: center;*/
+/*    margin-top: 0px;*/
+/*}*/
+
+/*#button-grid {*/
+/*    margin: 0 auto;*/
+/*    border-spacing: 1px;*/
+/*}*/
+
+/*#button-grid td {*/
+/*    padding: 1px;*/
+/*}*/
+
+/*button {*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*    font-size: 28px;*/
+/*    line-height: 30px;  !* Make line-height equal to the height of the button *!*/
+/*    text-align: center;  !* Center the text horizontally *!*/
+/*    vertical-align: middle;*/
+/*    display: inline-block;*/
+/*    background-color: #d0d0d0;*/
+
+/*}*/
+
+
+/* Base styles (for both orientations) */
+#game-container {
+    width: 100%;
+}
+
+#game-info {
+    text-align: left;
 }
 
 #button-grid {
@@ -16,10 +47,71 @@ button {
     width: 40px;
     height: 40px;
     font-size: 28px;
-    line-height: 30px;  /* Make line-height equal to the height of the button */
-    text-align: center;  /* Center the text horizontally */
+    line-height: 30px;
+    text-align: center;
     vertical-align: middle;
     display: inline-block;
     background-color: #d0d0d0;
+}
 
+/* Portrait Mode */
+@media only screen and (orientation: portrait) {
+    #game-controls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #button-grid {
+        margin-top: 20px;
+    }
+
+    button {
+        width: 32px;
+        height: 32px;
+        font-size: 14px !important;
+        line-height: 32px;
+    }
+
+}
+
+/* Landscape Mode */
+@media only screen and (orientation: landscape) {
+    #game-container {
+        display: flex;
+    }
+    #game-info h1 {
+        margin-bottom: 0.2em; /* Reduced from default (which is typically ~0.67em) */
+    }
+
+    #game-info h2 {
+        margin-top: 0.2em; /* Reduced from default */
+    }
+
+    #game-info {
+        flex: 1;  /* Takes 1/3 of space */
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #game-controls {
+        flex: 2;  /* Takes 2/3 of space */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #button-grid {
+        margin-top: 20px;
+    }
+
+    button {
+        width: 50px;
+        height: 50px;
+        font-size: 24px !important;
+        line-height: 50px;
+    }
 }

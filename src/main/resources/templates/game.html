@@ -8,12 +8,14 @@
 </head>
 <body>
 <div id="game-container">
-    <h1>Game Session</h1>
-    <h2 id="session-info">Loading session...</h2>
+    <div id="game-info">
+        <h1>Game Session</h1>
+        <h2 id="session-info">Loading session...</h2>
+    </div>
 
     <!-- Game controls -->
     <div id="game-controls">
-        <button id="game-state" style="font-size: 20px">🙂</button>
+        <button id="game-state" onclick="reset()" style="font-size: 20px">🙂</button>
         <table id="button-grid">
             <tr>
                 <td><button id="button-1-1" onclick="toggleState(1, 1)" oncontextmenu="flag(1, 1); event.preventDefault();"> </button></td>

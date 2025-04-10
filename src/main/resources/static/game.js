@@ -130,6 +130,26 @@ document.addEventListener("DOMContentLoaded", () => {
     //const newState = toggleButton.textContent === "0" ? "1" : "0"; // Toggle between 0 and 1
     //toggleButton.textContent = newState;
 
+    window.reset = function(){
+        fetch(`${window.location.origin}/api/reset`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                sessionCode: sessionCode,
+            })
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Failed to reset board");
+                }
+            })
+            .catch(error => {
+                console.error("Error resetting board:", error);
+            });
+    }
+
     // Send the state change to the backend
     window.toggleState = function (row, col) {
         fetch(`${window.location.origin}/api/toggle`, {

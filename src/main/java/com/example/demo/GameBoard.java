@@ -22,6 +22,18 @@ public class GameBoard {
             }
         }
     }
+
+    public void clearBoard()
+    {
+        generated = false;
+        state = "playing";
+        for(int i = 0; i < 12; i++){
+            for(int j = 0; j < 12; j++){
+                board[i][j] = new GameTile(0,'h');
+            }
+        }
+    }
+
     public void generateBoard(int clickRow, int clickCol){
         for(int i=0; i<20; i++) {
             int row = random.nextInt(12);
