@@ -22,7 +22,7 @@ public class GameBoard {
             }
         }
     }
-
+//
     public void clearBoard()
     {
         generated = false;
