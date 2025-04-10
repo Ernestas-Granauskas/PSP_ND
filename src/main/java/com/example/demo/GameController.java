@@ -2,32 +2,39 @@ package com.example.demo;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.Getter;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.socket.TextMessage;
+import org.springframework.web.socket.WebSocketSession;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
+import java.util.concurrent.ConcurrentHashMap;
 
 @RestController
 @RequestMapping("/api")
 public class GameController {
-    private final Map<String, GameSession> sessions = new HashMap<>();
+    @Getter
+    private final Map<String, GameSession> sessions = new ConcurrentHashMap<>();
     private final Map<String, GameBoard> boards = new HashMap<>();
 
     @Autowired
     private GameWebSocketHandler webSocketHandler;
 
     @GetMapping("/startSession")
-    public Map<String, String> startSession() {
+    public ResponseEntity<Map<String, String>> startSession() {
         String code = String.format("%04d", new Random().nextInt(10000));
         sessions.put(code, new GameSession(code));
         boards.put(code, new GameBoard());
         GameSession session = sessions.get(code);
-        session.join();
+        //session.join();
         System.out.println("Created new session with code: " + code);
-        return Map.of("sessionCode", code);
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(Map.of("sessionCode", code));
     }
 
     @PostMapping("/joinGame")
@@ -37,7 +44,7 @@ public class GameController {
 
         if (session != null) {
             if(!session.isFull()) {
-                session.join();
+                //session.join();
                 return ResponseEntity.ok(Map.of("status", "success", "message", "Successfully joined the session."));
             } else {
                 return ResponseEntity.badRequest().body(Map.of("status", "full", "message", "Session is full."));
@@ -87,25 +94,64 @@ public class GameController {
 
     private ResponseEntity<String> getResponseMessage(String code, GameBoard board) {
         try {
+            // Retrieve the GameSession from the sessions map
+            GameSession gameSession = sessions.get(code);
+
+            // If no session is found, return an error
+            if (gameSession == null) {
+                return ResponseEntity.status(404).body("Session not found.");
+            }
+
+            // Create the response object to be sent
             GameBoardResponse response = new GameBoardResponse(code, board.getState(), board.getView());
 
+            // Convert the response to JSON
             String updateMessage = new ObjectMapper().writeValueAsString(response);
 
-            webSocketHandler.broadcast(updateMessage);
+            // Send the message to each WebSocket in the game session's list of sockets
+            for (WebSocketSession socket : gameSession.getSockets()) {
+                try {
+                    if (socket.isOpen()) {
+                        socket.sendMessage(new TextMessage(updateMessage)); // Send the message
+                    }
+                } catch (Exception e) {
+                    // Log or handle any errors if necessary
+                    System.err.println("Error sending message to WebSocket session: " + e.getMessage());
+                }
+            }
 
-            return ResponseEntity.ok("State updated and broadcast.");
+            return ResponseEntity.ok("State updated and broadcast to connected players.");
         } catch (JsonProcessingException e) {
             return ResponseEntity.status(500).body("Error processing JSON: " + e.getMessage());
         }
     }
 
-    @PostMapping("/leave")
-    public ResponseEntity<Void> leaveSession(@RequestBody Map<String,String> body) {
-        System.out.println("left");
-        GameSession session = sessions.get(body.get("code"));
-        if (session != null) {
-            session.leave();
-        }
-        return ResponseEntity.ok().build();
-    }
+
+
+//    private ResponseEntity<String> getResponseMessage(String code, GameBoard board) {
+//        try {
+//            GameBoardResponse response = new GameBoardResponse(code, board.getState(), board.getView());
+//
+//            String updateMessage = new ObjectMapper().writeValueAsString(response);
+//
+//            webSocketHandler.broadcast(updateMessage);
+//
+//            return ResponseEntity.ok("State updated and broadcast.");
+//        } catch (JsonProcessingException e) {
+//            return ResponseEntity.status(500).body("Error processing JSON: " + e.getMessage());
+//        }
+//    }
+
+//    @PostMapping("/leave")
+//    public ResponseEntity<Void> leaveSession(@RequestBody Map<String,String> body) {
+//        System.out.println("left");
+//        GameSession session = sessions.get(body.get("code"));
+//        if (session != null) {
+//            session.leave();
+//        }
+//        return ResponseEntity.ok().build();
+//    }
+
+
+
 }

@@ -20,6 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // When the WebSocket connection is open, set up a listener for messages
     socket.onopen = function () {
         console.log("Connected to WebSocket server");
+
+        // Inform backend to join the session
+        socket.send(JSON.stringify({
+            type: "JOIN_SESSION",
+            sessionCode: sessionCode
+        }));
     };
 
     // Listen for state updates from the other player
@@ -118,7 +124,8 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // Function to toggle button state and send it to the backend
-    // window.toggleState = function () {
+    // window.
+    // = function () {
     //     const toggleButton = document.getElementById("toggle-button");
     //const newState = toggleButton.textContent === "0" ? "1" : "0"; // Toggle between 0 and 1
     //toggleButton.textContent = newState;

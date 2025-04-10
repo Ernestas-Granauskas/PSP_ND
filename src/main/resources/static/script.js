@@ -50,9 +50,3 @@ function joinGame() {
             console.error('Error joining the game:', error);
         }));
 }
-//
-// // Function to toggle the game state (unchanged)
-// function toggleState() {
-//     const toggleButton = document.getElementById("toggle-button");
-//     toggleButton.textContent = toggleButton.textContent === "0" ? "1" : "0";
-//}
